@@ -10,14 +10,14 @@ output "name" {
 
 output "domain" {
   description = "Domain name of the bucket"
-  value       = aws_s3_bucket_website_configuration.s3_bucket.website_domain
+  value       = aws_s3_bucket.s3_bucket.bucket_domain_name
 }
 
 output "website_endpoint" {
-  value = aws_s3_bucket_website_configuration.s3_bucket.website_endpoint
+  value = aws_s3_bucket.s3_bucket.website_endpoint
 }
 
 output "bucket_name" {
   description = "The name of the S3 bucket"
-  value       = aws_s3_bucket.my_bucket.bucket
+  value       = aws_s3_bucket.s3_bucket.bucket
 }
