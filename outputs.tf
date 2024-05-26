@@ -16,3 +16,8 @@ output "domain" {
 output "website_endpoint" {
   value = aws_s3_bucket_website_configuration.s3_bucket.website_endpoint
 }
+
+output "bucket_name" {
+  description = "The name of the S3 bucket"
+  value       = aws_s3_bucket.my_bucket.bucket
+}
